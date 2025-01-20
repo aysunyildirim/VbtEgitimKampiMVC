@@ -1,10 +1,10 @@
-﻿namespace VbtEgitimKampiMVC.Core.Domain.Entities;
+﻿using VbtEgitimKampiMVC.Infrastructure.Persistence.Repositories.Helper;
 
-public class ParkingLog
+namespace VbtEgitimKampiMVC.Core.Domain.Entities;
+
+public class ParkingLog : Entity<int>
 
 {
-
-    public int Id { get; set; }
     public int VehicleId { get; set; }
     public Vehicle Vehicle { get; set; }
     public int ParkingAreaId { get; set; }

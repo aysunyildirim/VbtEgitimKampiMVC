@@ -1,10 +1,10 @@
 ﻿using VbtEgitimKampiMVC.Core.Domain.Enums;
+using VbtEgitimKampiMVC.Infrastructure.Persistence.Repositories.Helper;
 
 namespace VbtEgitimKampiMVC.Core.Domain.Entities;
 
-public class Vehicle
+public class Vehicle : Entity<int>
 {
-    public int Id { get; set; }
     public string LicensePlate { get; set; }
     public VehicleType VehicleType { get; set; }
     public string Color { get; set; }

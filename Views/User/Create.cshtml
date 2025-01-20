@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Kullanıcı Oluştur";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Validation Summary for the entire form -->
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="FullName">İsim Soyisim</label>
+        <input type="text" class="form-control" id="FullName" name="FullName" />
+        @Html.ValidationMessage("FullName", "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label for="Email">E-posta</label>
+        <input type="email" class="form-control" id="Email" name="Email" />
+        @Html.ValidationMessage("Email", "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label for="PhoneNumber">Telefon Numarası</label>
+        <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" />
+        @Html.ValidationMessage("PhoneNumber", "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label for="Password">Şifre</label>
+        <input type="password" class="form-control" id="Password" name="Password" />
+        @Html.ValidationMessage("Password", "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label for="RoleId">Rol</label>
+        <select class="form-control" id="RoleId" name="RoleId">
+            <option value="1">Admin</option>
+            <option value="2">User</option>
+            <option value="3">Manager</option>
+        </select>
+        @Html.ValidationMessage("RoleId", "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kullanıcı Oluştur</button>
+</form>

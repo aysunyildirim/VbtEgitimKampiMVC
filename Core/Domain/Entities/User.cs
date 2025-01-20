@@ -1,9 +1,9 @@
-﻿namespace VbtEgitimKampiMVC.Core.Domain.Entities;
+﻿using VbtEgitimKampiMVC.Infrastructure.Persistence.Repositories.Helper;
 
-public class User
+namespace VbtEgitimKampiMVC.Core.Domain.Entities;
+
+public class User : Entity<int>
 {
-
-    public int Id { get; set; }
     public string FullName { get; set; }
     public string Email { get; set; }
     public string PhoneNumber { get; set; }

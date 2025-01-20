@@ -1,9 +1,9 @@
-﻿namespace VbtEgitimKampiMVC.Core.Domain.Entities;
+﻿using VbtEgitimKampiMVC.Infrastructure.Persistence.Repositories.Helper;
 
-public class ParkingFee
+namespace VbtEgitimKampiMVC.Core.Domain.Entities;
+
+public class ParkingFee : Entity<int>
 {
-
-    public int Id { get; set; }
     public decimal HourlyRate { get; set; }
     public decimal DailyRate { get; set; }
     public decimal MonthlyRate { get; set; }
